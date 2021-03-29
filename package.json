@@ -10,6 +10,7 @@
   "dependencies": {
     "ant-design-vue": "2.1.0",
     "core-js": "^3.6.5",
+    "mddir": "^1.1.1",
     "path": "^0.12.7",
     "pixi.js": "^6.0.1",
     "vue": "^3.0.0",

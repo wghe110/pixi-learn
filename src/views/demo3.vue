@@ -25,21 +25,18 @@ export default {
       const { $refs: { pixiRef } } = this
       pixiRef.appendChild(app.view)
 
-      // 添加图片到舞台
-      PIXI.Loader.shared
-        .add('logo', require('assetsPath/logo.png'))
+      const loader = PIXI.Loader.shared;
+      loader.add('sprite', require('assetsPath/zombie-no-pivot.png'))
         .load((loader, resources) => {
-          const texture = resources.logo.texture;
-          const sprite = new PIXI.Sprite(texture)
-          app.stage.addChild(sprite)
+          const texture = resources.sprite.texture;
 
+          const react = new PIXI.Rectangle(2, 2, 278, 478);
+          texture.frame = react
+
+          const zombie = new PIXI.Sprite(texture)
+          app.stage.addChild(zombie)
         })
-
-
     }
   }
 }
 </script>
-
-<style  scoped>
-</style>
