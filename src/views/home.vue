@@ -12,15 +12,17 @@
 
 <script>
 import demo1 from './demo1.vue'
+import demo2 from './demo2.vue'
 
 export default {
   components: {
-    demo1
+    demo1,
+    demo2,
   },
   data() {
     return {
       activeKey: 'demo1',
-      demos: ['demo1']
+      demos: ['demo1', 'demo2']
     }
   }
 }
