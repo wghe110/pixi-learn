@@ -25,7 +25,7 @@ export default {
       const { $refs: { pixiRef } } = this
       pixiRef.appendChild(app.view)
 
-      const loader = PIXI.Loader.shared;
+      const loader = new PIXI.Loader();
       loader.add('logo', require('assetsPath/logo.png'))
         .load((loader, resources) => {
           const sprite = new PIXI.Sprite(resources.logo.texture)

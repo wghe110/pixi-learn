@@ -26,7 +26,8 @@ export default {
       pixiRef.appendChild(app.view)
 
       // 添加图片到舞台
-      PIXI.Loader.shared
+      const loader = new PIXI.Loader();
+      loader
         .add('logo', require('assetsPath/logo.png'))
         .load((loader, resources) => {
           const texture = resources.logo.texture;

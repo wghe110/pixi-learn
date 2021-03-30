@@ -25,7 +25,7 @@ export default {
       const { $refs: { pixiRef } } = this
       pixiRef.appendChild(app.view)
 
-      const loader = PIXI.Loader.shared;
+      const loader = new PIXI.Loader();
       loader.add('sprite', require('assetsPath/zombie-no-pivot.png'))
         .load((loader, resources) => {
           const texture = resources.sprite.texture;

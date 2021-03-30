@@ -14,9 +14,9 @@ export default {
       const app = new PIXI.Application();
       this.$refs.pixiRef.appendChild(app.view)
 
-      const { Loader: { shared } } = PIXI
-      shared
-        .add('zombie', require('assetsPath/zombie.json'))
+      const loader = new PIXI.Loader();
+      loader
+        .add('zombie', 'zombie.json')
         .load((loader, resources) => {
           console.log('resources', resources)
           const sheet = resources.zombie.spritesheet;

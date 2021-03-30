@@ -13,8 +13,8 @@ export default {
       const app = new PIXI.Application()
       this.$refs.pixiRef.appendChild(app.view)
 
-      const { Loader: { shared } } = PIXI;
-      shared
+      const loader = new PIXI.Loader();
+      loader
         .add('walk1', require('assetsPath/zombie/walk1.png'))
         .add('walk2', require('assetsPath/zombie/walk2.png'))
         .add('walk3', require('assetsPath/zombie/walk3.png'))
